@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Shadows+Into+Light&display=swap');
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header {
+    /* background-color: #2b3c5e; */
+    display: grid;
+    grid-template-columns: 150px auto;
+    background-color: #a46843;
+}
+
+#title {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+li {
+    flex-grow: 1;
+}
+
+a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #ccc;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
