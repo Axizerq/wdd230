@@ -74,13 +74,14 @@
         margin: 10px;
     }
 
-    h1 {
+    .page_title {
         color: black;
-        font-size: 1.3em;
+        font-size: 1.1em;
         text-align: center;
+        margin-bottom: -30px;
     }
 
-    h2 {
+    .tables {
         text-align: center;
         margin-top: -10px;
         background-color: lightblue;

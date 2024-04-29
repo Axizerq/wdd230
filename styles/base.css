@@ -74,11 +74,11 @@ main {
     margin: 10px;
 }
 
-h1 {
+.page_title {
     color: black;
 }
 
-h2 {
+.tables {
     text-align: center;
     margin-top: -10px;
     background-color: lightblue;
