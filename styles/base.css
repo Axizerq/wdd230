@@ -92,3 +92,7 @@ footer {
     text-align: center;
     background-color: lightblue;
 }
+
+img {
+    vertical-align: middle;
+}

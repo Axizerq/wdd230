@@ -90,6 +90,10 @@
         margin-right: -10px;
     }
 
+    img {
+        vertical-align: middle;
+    }
+
     footer {
         text-align: center;
         background-color: lightblue;
