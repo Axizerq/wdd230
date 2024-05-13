@@ -56,7 +56,7 @@
     }
 
     #menu.show::before {
-        content: "Close";
+        content: "❌";
     }
 
     /* Ваш CSS код для больших экранов */
