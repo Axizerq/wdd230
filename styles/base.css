@@ -63,6 +63,7 @@ nav {
 }
 
 .herolabel {
+    position: absolute;
     margin: 0;
     padding: .25rem;
     text-align: left;
