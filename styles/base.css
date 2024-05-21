@@ -47,19 +47,12 @@ nav {
     font-size: 2rem;
 }
 
-/*.hero {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    display: block;
-} */
-
 .hero {
     margin: 10px auto;
     position: relative;
+    margin-left: 90px;
     border: 1px solid rgba(0, 0, 0, .1);
     height: 300px;
-
 }
 
 .hero img {
@@ -144,10 +137,6 @@ main {
     margin: 10px;
 }
 
-/* .page_title {
-    color: black;
-} */
-
 .tables {
     text-align: center;
     margin-top: -10px;
@@ -162,7 +151,3 @@ footer {
     text-align: center;
     background-color: lightblue;
 }
-
-/* img {
-    vertical-align: middle;
-} */

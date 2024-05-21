@@ -4,6 +4,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        max-width: 100%;
     }
 
     body {
@@ -118,6 +119,7 @@
         display: grid;
         /* grid-template-columns: 2fr 1fr; */
         gap: 10px;
+        max-width: 100%;
     }
 
     .weeks {
