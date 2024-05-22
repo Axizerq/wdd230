@@ -171,10 +171,10 @@ img {
     /* Разместить основную зону во втором столбце */
 }
 
-.blur {
+#blur {
     filter: blur(4px);
 }
 
-.blur:hover {
+#blur:hover {
     filter: none;
 }
