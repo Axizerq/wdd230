@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development, Andrey Tochilin, course assignment portal">
+    <meta name="author" content="Andrey Tochilin">
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Chamber" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://axizerq.github.io/wdd230/Chamber/index.html" />
+    <meta property="og:image" href="images/moscow.jpg" />
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (max-width: 767px)">
+    <title>Andrey Tochilin - WDD 230 - Web Frontend Development</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/Moscow1.jpg" alt="Moscow">
+        <span>
+            <h1 id="title">Chamber</h1>
+        </span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Current Events</a></li>
+            <li><a href="weather.html">Weather Card</a></li>
+            <li><a href="spotlights.html">Spotlights</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="section events">
+            <h2>Events</h2>
+            <p>Here is events.</p>
+
+        </div>
+        <div class="section weather">
+            <h2>Weather</h2>
+            <p>Weather is here.</p>
+        </div>
+        <div class="section ad">
+            <h2>Advertisement</h2>
+            <p>Video.</p>
+        </div>
+        <div class="section map">
+            <h2>Map</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17901.0525890483!2d37.60271998443683!3d55.886405258212456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5373eb2f42dd3%3A0xe62d5dfd36346c39!2z0JHQuNCx0LjRgNC10LLQvg!5e0!3m2!1sru!2sus!4v1715996417456!5m2!1sru!2sus"
+                width="1000" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>"
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span>Andrey Tochilin - Chamber - WDD 230 Project <img src="images/flag.jpg"
+                alt="Flag"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+
+</body>
+
+</html>
