@@ -106,6 +106,8 @@ footer {
 .ratingOutput {
     text-align: center;
     line-height: 1;
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
