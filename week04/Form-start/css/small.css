@@ -128,7 +128,7 @@ footer {
     margin-right: 6px;
 }
 
-.wf1 input[type='sumit'] {
+.wf1 input[type='submit'] {
     border: solid 1px #999;
     background-color: linear-gradient(#9c2c13, #6f200e);
     color: #fff;
