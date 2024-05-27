@@ -1,0 +1,182 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --form-spacing: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    font-family: Roboto, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: var(--form-spacing);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="range"] {
+    padding: 5px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    margin-bottom: var(--form-spacing);
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation li {
+    margin: 0 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-bottom: -10px;
+    flex-wrap: wrap;
+    padding: 0px 22px;
+    margin-left: -22px;
+}
+
+li {
+    flex-grow: 1;
+}
+
+a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #ccc;
+}
+
+footer {
+    text-align: center;
+    background-color: lightblue;
+}
+
+.ratingOutput {
+    text-align: center;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form input[type="range"] {
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+}
+
+form output {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
