@@ -12,6 +12,7 @@ html {
 }
 
 
+
 /*----------- BODY --------------*/
 body {
     font-size: 16px;
@@ -124,11 +125,11 @@ footer {
 }
 
 .wf1 input[type="radio"],
-.wf1 input[type='checkbox'] {
+.wf1 input[type="checkbox"] {
     margin-right: 6px;
 }
 
-.wf1 input[type='submit'] {
+.wf1 input[type="submit"] {
     border: solid 1px #999;
     background-color: linear-gradient(#9c2c13, #6f200e);
     color: #fff;
