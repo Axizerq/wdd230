@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development, Andrey Tochilin, course assignment portal">
+    <meta name="author" content="Andrey Tochilin">
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Chamber" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://axizerq.github.io/wdd230/Chamber/index.html" />
+    <meta property="og:image" href="images/moscow.jpg" />
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (max-width: 767px)">
+    <title>Andrey Tochilin - WDD 230 - Web Frontend Development</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/Moscow_wide.webp" alt="Moscow">
+        <span>
+            <h1 id="title">Chamber</h1>
+        </span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Current Events</a></li>
+            <li><a href="weather.html">Weather Card</a></li>
+            <li><a href="spotlights.html">Spotlights</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <form action="thankyou.html" method="get">
+            <label for="first-name">First Name:
+                <input type="text" id="first-name" name="first-name" required></label>
+
+            <label for="last-name">Last Name:
+                <input type="text" id="last-name" name="last-name" required></label>
+
+            <label for="title">Applicant's Title/Position:
+                <input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}"
+                    title="Only alpha characters, hyphens, and spaces are allowed with a minimum of seven characters"
+                    required></label>
+
+            <label for="email">Email Address:
+                <input type="email" id="email" name="email" placeholder="example@example.com" required></label>
+
+            <label for="phone">Mobile Phone Number:
+                <input type="tel" id="phone" name="phone" required></label>
+
+            <label for="organization">Business/Organization's Name:
+                <input type="text" id="organization" name="organization" required></label>
+
+            <label for="membership">Membership Level:</label>
+            <select id="membership" name="membership">
+                <option value="NP">NP Membership (Non-Profit, No Fee)</option>
+                <option value="Bronze">Bronze Membership</option>
+                <option value="Silver">Silver Membership</option>
+                <option value="Gold">Gold Membership</option>
+            </select>
+
+            <label for="description">Business/Organization's Description:
+                <textarea id="description" name="description"></textarea></label>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
+
+            <input type="submit" value="Send Application">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span>Andrey Tochilin - Chamber - WDD 230 Project <img src="images/flag.jpg"
+                alt="Flag"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+
+</body>
+
+</html>
