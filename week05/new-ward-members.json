@@ -1,0 +1,28 @@
+{
+    "lastName": "Ivanov",
+    "moveInDate": "2023-05-15",
+    "familyMembersCount": 4,
+    "visitedBishopric": true,
+    "familyMembers": [
+        {
+            "firstName": "Alexey",
+            "gender": "male",
+            "birthDate": "1980-04-10"
+        },
+        {
+            "firstName": "Maria",
+            "gender": "female",
+            "birthDate": "1983-07-22"
+        },
+        {
+            "firstName": "Nikolay",
+            "gender": "male",
+            "birthDate": "2010-11-30"
+        },
+        {
+            "firstName": "Sofia",
+            "gender": "female",
+            "birthDate": "2014-09-05"
+        }
+    ]
+}
