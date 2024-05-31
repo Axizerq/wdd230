@@ -1,0 +1,73 @@
+{
+    "weeks": [
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "HG Layout"
+                },
+                {
+                    "url": "week01/media-query.html",
+                    "title": "mQueries"
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "week02/BOM.html",
+                    "title": "BOM"
+                },
+                {
+                    "url": "week02/design.html",
+                    "title": "Design"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Lazyload"
+                },
+                {
+                    "url": "week03/Response-images.html",
+                    "title": "IMG"
+                },
+                {
+                    "url": "week03/bom.html",
+                    "title": "BOM2"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "Tables"
+                },
+                {
+                    "url": "week04/css-transitions.html",
+                    "title": "CSS Transitions"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "week05/Prophets.html",
+                    "title": "Prophets"
+                },
+                {
+                    "url": "week05/weather.html",
+                    "title": "Weather"
+                }
+            ]
+        }
+    ]
+}
