@@ -5,11 +5,11 @@
             "links": [
                 {
                     "url": "week01/holygrail.html",
-                    "title": "HG Layout"
+                    "title": "HG"
                 },
                 {
-                    "url": "week01/media-query.html",
-                    "title": "mQueries"
+                    "url": "week01/chamber-site-plan.html",
+                    "title": "Chamber Plan"
                 }
             ]
         },
@@ -17,7 +17,7 @@
             "week": "Week 2",
             "links": [
                 {
-                    "url": "week02/BOM.html",
+                    "url": "week02/bom.html",
                     "title": "BOM"
                 },
                 {
@@ -49,10 +49,6 @@
                 {
                     "url": "week04/tablebuild.html",
                     "title": "Tables"
-                },
-                {
-                    "url": "week04/css-transitions.html",
-                    "title": "CSS Transitions"
                 }
             ]
         },
