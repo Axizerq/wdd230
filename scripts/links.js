@@ -8,13 +8,13 @@ async function getLinks() {
         const response = await fetch(linksURL);
         if (response.ok) {
             const data = await response.json();
-            console.log('Полученные данные:', data); // Для отладки
+            console.log('The received data:', data); // For debugging
             displayLinks(data.weeks);
         } else {
-            console.error('Не удалось получить данные ссылок:', response.statusText);
+            console.error('Link data could not be retrieved:', response.statusText);
         }
     } catch (error) {
-        console.error('Ошибка при получении данных ссылок:', error);
+        console.error('Error when receiving link data:', error);
     }
 }
 
