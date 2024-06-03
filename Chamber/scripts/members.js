@@ -1,8 +1,6 @@
 const baseURL = "https://axizerq.github.io/wdd230/Chamber/";
 const membersURL = `https://axizerq.github.io/wdd230/Chamber/data/members.json`;
 
-const gridContainer = document.querySelector('.grid-container');
-gridContainer.classList.add('grid');
 
 // Asynchronous function to fetch the JSON data
 async function getMembers() {
