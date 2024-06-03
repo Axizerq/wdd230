@@ -242,7 +242,7 @@ input[type="submit"]:hover {
     margin: 1rem auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    background-color: #bed;
+    background-color: lightblue;
     text-align: center;
 }
 
@@ -325,10 +325,4 @@ section a {
     font-size: 0.85rem;
     color: navy;
     letter-spacing: 1.1pt;
-}
-
-img {
-    height: 75px;
-    max-width: 100%;
-    /* Images are jerks - Seattle*/
 }
