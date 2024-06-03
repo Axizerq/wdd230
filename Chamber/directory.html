@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="description" content="WDD 230 - Web Frontend Development, Andrey Tochilin, course assignment portal">
+    <meta name="author" content="Andrey Tochilin">
+    <link rel="icon" href="favicon.ico">
+
+    <meta property="og:title" content="Chamber" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://axizerq.github.io/wdd230/Chamber/index.html" />
+    <meta property="og:image" href="images/moscow.jpg" />
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (max-width: 767px)">
+    <title>Andrey Tochilin - WDD 230 - Web Frontend Development</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/Moscow_wide.webp" alt="Moscow">
+        <span>
+            <h1 id="title">Chamber</h1>
+        </span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Current Events</a></li>
+            <li><a href="weather.html">Weather Card</a></li>
+            <li><a href="spotlights.html">Spotlights</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 class="tables">Members</h2>
+        <div id="members-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="year"></span>Andrey Tochilin - Chamber - WDD 230 Project <img src="images/flag.jpg"
+                alt="Flag"></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/members.js"></script>
+
+</body>
+
+</html>
