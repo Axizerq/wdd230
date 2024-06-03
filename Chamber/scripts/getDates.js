@@ -27,10 +27,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('timestamp').value = new Date().toISOString();
 });
 
-
-
-
-var registrationButton = document.getElementById('registrationButton');
-registrationButton.addEventListener('click', function () {
-    window.location.href = 'страница_регистрации.html';
-});
