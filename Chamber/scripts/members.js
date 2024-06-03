@@ -66,6 +66,9 @@ function displayMembers(members) {
 // Call the function to get and display the members
 getMembers();
 
+const gridContainer = document.querySelector('.grid-container');
+gridContainer.classList.add('grid');
+
 /*fetch('members.json')
     .then(response => response.json())
     .then(data => {
