@@ -5,7 +5,7 @@
             "address": "123 Main Street, City, Country",
             "phone": "123-456-7890",
             "website": "https://www.company1.com",
-            "image": "company1.webp",
+            "image": "company.webp",
             "membershipLevel": "Gold",
             "otherInfo": "There can be absolutely any other information here."
         },
@@ -14,7 +14,7 @@
             "address": "456 Second Street, City, Country",
             "phone": "987-654-3210",
             "website": "https://www.company2.com",
-            "image": "company2.jpg",
+            "image": "company.webp",
             "membershipLevel": "Silver",
             "otherInfo": "There can be absolutely any other information here."
         },
@@ -23,7 +23,7 @@
             "address": "789 Third Street, City, Country",
             "phone": "111-222-3333",
             "website": "https://www.company3.com",
-            "image": "company3.jpg",
+            "image": "company.webp",
             "membershipLevel": "Bronze",
             "otherInfo": "There can be absolutely any other information here."
         },
@@ -32,7 +32,7 @@
             "address": "987 Fourth Street, City, Country",
             "phone": "444-555-6666",
             "website": "https://www.company4.com",
-            "image": "company4.jpg",
+            "image": "company.webp",
             "membershipLevel": "Standard",
             "otherInfo": "There can be absolutely any other information here."
         },
@@ -41,7 +41,7 @@
             "address": "654 Fifth Street, City, Country",
             "phone": "777-888-9999",
             "website": "https://www.company5.com",
-            "image": "company5.jpg",
+            "image": "company.webp",
             "membershipLevel": "Gold",
             "otherInfo": "There can be absolutely any other information here."
         },
@@ -50,7 +50,7 @@
             "address": "321 Sixth Street, City, Country",
             "phone": "000-111-2222",
             "website": "https://www.company6.com",
-            "image": "company6.jpg",
+            "image": "company.webp",
             "membershipLevel": "Silver",
             "otherInfo": "There can be absolutely any other information here."
         },
@@ -59,7 +59,7 @@
             "address": "555 Seventh Street, City, Country",
             "phone": "333-444-5555",
             "website": "https://www.company7.com",
-            "image": "company7.jpg",
+            "image": "company.webp",
             "membershipLevel": "Bronze",
             "otherInfo": "There can be absolutely any other information here."
         }
