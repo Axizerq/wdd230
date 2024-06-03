@@ -1,4 +1,4 @@
-const baseURL = "https://axizerq.github.io/wdd230/Chamber/";
+/* const baseURL = "https://axizerq.github.io/wdd230/Chamber/";
 const membersURL = `https://axizerq.github.io/wdd230/Chamber/data/members.json`;
 
 
@@ -63,30 +63,59 @@ function displayMembers(members) {
     });
 }
 
+
+// Call the function to get and display the members
+getMembers(); */
+
+const baseURL = "https://axizerq.github.io/wdd230/Chamber/";
+const membersURL = `https://axizerq.github.io/wdd230/Chamber/data/members.json`;
+
+// Asynchronous function to fetch the JSON data
+async function getMembers() {
+    try {
+        const response = await fetch(membersURL);
+        if (response.ok) {
+            const data = await response.json();
+            console.log('The received data:', data); // Для отладки
+            displayMembers(data.members);
+        } else {
+            console.error('Link data could not be retrieved:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error when receiving link data', error);
+    }
+}
+
+const container = document.querySelector('#members-container tbody');
+
+// Function to display members in a 3x3 grid
+function displayMembers(members) {
+    // Clear any existing content
+    container.innerHTML = '';
+
+    let row;
+    members.forEach((member, index) => {
+        // Create a new row for every 3 members
+        if (index % 3 === 0) {
+            row = document.createElement('tr');
+            container.appendChild(row);
+        }
+
+        // Create a cell for each member
+        const cell = document.createElement('td');
+        const memberContent = `
+            <h2>${member.name}</h2>
+            <p>Address: ${member.address}</p>
+            <p>Phone: ${member.phone}</p>
+            <a href="${member.website}">Website</a>
+            <img src="${baseURL}images/${member.image}" alt="${member.name}" />
+            <p>Membership Level: ${member.membershipLevel}</p>
+            <p>Other Info: ${member.otherInfo}</p>
+        `;
+        cell.innerHTML = memberContent;
+        row.appendChild(cell);
+    });
+}
+
 // Call the function to get and display the members
 getMembers();
-
-const gridContainer = document.querySelector('.grid-container');
-gridContainer.classList.add('grid');
-
-/*fetch('members.json')
-    .then(response => response.json())
-    .then(data => {
-        // Get the container element
-        const membersContainer = document.getElementById('members-container');
-
-        // Create HTML elements based on the JSON data
-        data.members.forEach(member => {
-            const memberElement = document.createElement('div');
-            memberElement.innerHTML = `
-        <h2>${member.name}</h2>
-        <p>Address: ${member.address}</p>
-        <p>Phone: ${member.phone}</p>
-        <p>Website: <a href="${member.website}">${member.website}</a></p>
-        <img src="${member.image}" alt="${member.name}">
-        <p>Membership Level: ${member.membershipLevel}</p>
-        <p>Other Info: ${member.otherInfo}</p>
-      `;
-            membersContainer.appendChild(memberElement);
-        });
-    }); */
