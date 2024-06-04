@@ -1,31 +1,34 @@
-function displayAds() {
-    fetch('members.json')
-        .then(response => response.json())
-        .then(data => {
-            const members = data.members;
-            const qualifiedMembers = members.filter(member => member.membershipLevel === "Silver" || member.membershipLevel === "Gold");
-            const adSection = document.querySelector('.section.ad');
-            adSection.innerHTML = '';
-            const randomMembers = getRandomMembers(qualifiedMembers, 3); // Выбираем случайных 3 участников
-            randomMembers.forEach(member => {
-                const adDiv = document.createElement('div');
-                adDiv.innerHTML = `
-                    <h2>${member.name}</h2>
-                    <p>Адрес: ${member.address}</p>
-                    <p>Телефон: ${member.phone}</p>
-                    <p>Веб-сайт: <a href="${member.website}" target="_blank">${member.website}</a></p>
-                    <img src="${member.image}" alt="${member.name}">
-                    <p>${member.otherInfo}</p>
-                `;
-                adSection.appendChild(adDiv);
-            });
-        })
-        .catch(error => console.log(error));
-}
-
 function getRandomMembers(members, count) {
-    const shuffled = members.sort(() => 0.5 - Math.random()); // Перемешиваем участников
-    return shuffled.slice(0, count); // Выбираем случайное количество участников
+    const qualifiedMembers = members.filter(member => member.membershipLevel === "Silver" || member.membershipLevel === "Gold");
+    const randomMembers = [];
+    while (randomMembers.length < count && qualifiedMembers.length > 0) {
+        const randomIndex = Math.floor(Math.random() * qualifiedMembers.length);
+        randomMembers.push(qualifiedMembers.splice(randomIndex, 1)[0]);
+    }
+    return randomMembers;
 }
 
-displayAds();
+function displaySpotlightAds(members) {
+    const adsContainer = document.getElementById('ads-container');
+    const randomMembers = getRandomMembers(members, 3);
+    randomMembers.forEach(member => {
+        const adDiv = document.createElement('div');
+        adDiv.classList.add('ad-item');
+        adDiv.innerHTML = `
+        <img src="${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>${member.otherInfo}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+      `;
+        adsContainer.appendChild(adDiv);
+    });
+}
+
+fetch('members.json')
+    .then(response => response.json())
+    .then(data => {
+        displaySpotlightAds(data.members);
+    })
+    .catch(error => {
+        console.log(error);
+    });
