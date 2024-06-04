@@ -26,18 +26,6 @@ function displayResults(data) {
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
     captionDesc.textContent = `${desc}`;
-
-    const iconsrc2 = `https://openweathermap.org/img/w/${data.weather[1].icon}.png`;
-    let desc2 = data.weather[1].description;
-    weatherIcon2.setAttribute('src', iconsrc2);
-    weatherIcon2.setAttribute('alt', desc2);
-    captionDesc2.textContent = `${desc2}`;
-
-    const iconsrc3 = `https://openweathermap.org/img/w/${data.weather[2].icon}.png`;
-    let desc3 = data.weather[2].description;
-    weatherIcon3.setAttribute('src', iconsrc3);
-    weatherIcon3.setAttribute('alt', desc3);
-    captionDesc3.textContent = `${desc3}`;
 }
 
 apiFetch();
