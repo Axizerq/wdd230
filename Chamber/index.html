@@ -42,8 +42,15 @@
 
         </div>
         <div class="section weather">
-            <h2>Weather</h2>
-            <p>Weather is here.</p>
+            <h2>Weather:</h2>
+            <img id="weather-icon" src="" alt="weather-icon">
+            <span id="current-temp">Fahrenheit</span>
+
+            <img id="weather-icon2" src="" alt="weather-icon">
+            <span id="current-temp2">Fahrenheit</span>
+
+            <img id="weather-icon3" src="" alt="weather-icon">
+            <span id="current-temp3">Fahrenheit</span>
         </div>
         <div class="section ad">
             <h2>Advertisement</h2>
@@ -66,6 +73,61 @@
     </footer>
 
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/displayAds.js"></script>
+
+    <!--
+    <script>
+        // JSON data of qualified members
+        const membersData = [
+            {
+                name: "Member 1",
+                level: "silver",
+                ad: "Ad 1"
+            },
+            {
+                name: "Member 2",
+                level: "gold",
+                ad: "Ad 2"
+            },
+            {
+                name: "Member 3",
+                level: "silver",
+                ad: "Ad 3"
+            }
+        ];
+
+        // Function to randomly select qualified members
+        function getRandomMembers() {
+            const qualifiedMembers = membersData.filter(member => member.level === "silver" || member.level === "gold");
+            const randomMembers = [];
+            while (randomMembers.length < 2 && qualifiedMembers.length > 0) {
+                const randomIndex = Math.floor(Math.random() * qualifiedMembers.length);
+                randomMembers.push(qualifiedMembers.splice(randomIndex, 1)[0]);
+            }
+            return randomMembers;
+        }
+
+        // Function to display the ads
+        function displayAds() {
+            const randomMembers = getRandomMembers();
+            const adSection = document.querySelector('.section.ad');
+            adSection.innerHTML = '';
+            randomMembers.forEach(member => {
+                const adDiv = document.createElement('div');
+                adDiv.innerHTML = `
+                    <h2>${member.name}</h2>
+                    <p>${member.ad}</p>
+                `;
+                adSection.appendChild(adDiv);
+            });
+        }
+
+        // Call the displayAds function to show the ads
+        displayAds();
+    </script> -->
+
+
 
 </body>
 
