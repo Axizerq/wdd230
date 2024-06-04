@@ -15,11 +15,11 @@ function displaySpotlightAds(members) {
         const adDiv = document.createElement('div');
         adDiv.classList.add('ad-item');
         adDiv.innerHTML = `
-        <img src="${member.image}" alt="${member.name}">
-        <h3>${member.name}</h3>
-        <p>${member.otherInfo}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
+            <img src="${member.image}" alt="${member.name}">
+            <h3>${member.name}</h3>
+            <p>${member.otherInfo}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+        `;
         adsContainer.appendChild(adDiv);
     });
 }
@@ -30,5 +30,5 @@ fetch('members.json')
         displaySpotlightAds(data.members);
     })
     .catch(error => {
-        console.log(error);
+        console.error('Error:', error);
     });
