@@ -41,3 +41,18 @@ function displayResults(data) {
 }
 
 apiFetch();
+
+
+const currentDate = new Date();
+const currentDay = currentDate.getDay();
+
+if (currentDay >= 1 && currentDay <= 3) {
+    const banner = document.getElementById('banner');
+    const closeBtn = document.getElementById('closeBtn');
+
+    banner.style.display = 'block';
+
+    closeBtn.addEventListener('click', () => {
+        banner.style.display = 'none';
+    });
+}

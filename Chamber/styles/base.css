@@ -326,3 +326,21 @@ section a {
     color: navy;
     letter-spacing: 1.1pt;
 }
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 80%;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
