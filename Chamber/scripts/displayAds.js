@@ -1,26 +1,35 @@
-function displayAds() {
-    fetch('members.json')
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('path/to/your/members.json')
         .then(response => response.json())
         .then(data => {
             const members = data.members;
-            const qualifiedMembers = members.filter(member => member.membershipLevel === "Silver" || member.membershipLevel === "Gold");
-            const adSection = document.querySelector('.section.ad');
-            adSection.innerHTML = '';
-            qualifiedMembers.slice(0, 3).forEach(member => {
-                const adDiv = document.createElement('div');
-                adDiv.innerHTML = `
-                    <h2>${member.name}</h2>
-                    <p>Address: ${member.address}</p>
-                    <p>Phone: ${member.phone}</p>
-                    <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-                    <img src="${member.image}" alt="${member.name}">
+            const qualifiedMembers = members.filter(member =>
+                member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
+            );
+
+            // Shuffle the qualified members array
+            qualifiedMembers.sort(() => 0.5 - Math.random());
+
+            // Select 2 or 3 random members
+            const selectedMembers = qualifiedMembers.slice(0, 3);
+
+            // Get the ads container
+            const adsContainer = document.getElementById('ads-container');
+
+            // Display the selected members
+            selectedMembers.forEach(member => {
+                const memberDiv = document.createElement('div');
+                memberDiv.className = 'ad-member';
+                memberDiv.innerHTML = `
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>${member.phone}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                    <img src="path/to/images/${member.image}" alt="${member.name}">
                     <p>${member.otherInfo}</p>
                 `;
-                adSection.appendChild(adDiv);
+                adsContainer.appendChild(memberDiv);
             });
         })
-        .catch(error => console.log(error));
-}
-
-// Вызов функции displayAds для отображения рекламы
-displayAds();
+        .catch(error => console.error('Error fetching the members data:', error));
+});
