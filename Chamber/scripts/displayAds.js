@@ -68,15 +68,15 @@ const membersData = {
     ]
 };
 
-// Функция для случайной выборки элементов из массива
+
 function getRandomElements(arr, count) {
     const shuffled = arr.sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
 }
 
-// Функция для отображения выбранных членов
+
 function displaySpotlightMembers(members) {
-    spotlightContainer.innerHTML = ''; // Очистка предыдущих данных
+    spotlightContainer.innerHTML = '';
 
     members.forEach(member => {
         const memberDiv = document.createElement('div');
@@ -93,7 +93,7 @@ function displaySpotlightMembers(members) {
     });
 }
 
-// Основная логика
+
 function init() {
     const qualifiedMembers = membersData.members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
     const spotlightMembers = getRandomElements(qualifiedMembers, 3);
