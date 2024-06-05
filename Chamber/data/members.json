@@ -5,7 +5,7 @@
             "address": "123 Main Street, City, Country",
             "phone": "123-456-7890",
             "website": "https://www.company1.com",
-            "image": "images/company.webp",
+            "image": "https://axizerq.github.io/wdd230/Chamber/images/company.webp",
             "membershipLevel": "Gold",
             "otherInfo": "There can be absolutely any other information here."
         },
