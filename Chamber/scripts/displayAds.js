@@ -1,34 +1,103 @@
-function getRandomMembers(members, count) {
-    const qualifiedMembers = members.filter(member => member.membershipLevel === "Silver" || member.membershipLevel === "Gold");
-    const randomMembers = [];
-    while (randomMembers.length < count && qualifiedMembers.length > 0) {
-        const randomIndex = Math.floor(Math.random() * qualifiedMembers.length);
-        randomMembers.push(qualifiedMembers.splice(randomIndex, 1)[0]);
-    }
-    return randomMembers;
+const spotlightContainer = document.querySelector('#spotlight-container');
+
+const membersData = {
+    "members": [
+        {
+            "name": "Company 1",
+            "address": "123 Main Street, City, Country",
+            "phone": "123-456-7890",
+            "website": "https://www.company1.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Gold",
+            "otherInfo": "There can be absolutely any other information here."
+        },
+        {
+            "name": "Company 2",
+            "address": "456 Second Street, City, Country",
+            "phone": "987-654-3210",
+            "website": "https://www.company2.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Silver",
+            "otherInfo": "There can be absolutely any other information here."
+        },
+        {
+            "name": "Company 3",
+            "address": "789 Third Street, City, Country",
+            "phone": "111-222-3333",
+            "website": "https://www.company3.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Bronze",
+            "otherInfo": "There can be absolutely any other information here."
+        },
+        {
+            "name": "Company 4",
+            "address": "987 Fourth Street, City, Country",
+            "phone": "444-555-6666",
+            "website": "https://www.company4.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Standard",
+            "otherInfo": "There can be absolutely any other information here."
+        },
+        {
+            "name": "Company 5",
+            "address": "654 Fifth Street, City, Country",
+            "phone": "777-888-9999",
+            "website": "https://www.company5.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Gold",
+            "otherInfo": "There can be absolutely any other information here."
+        },
+        {
+            "name": "Company 6",
+            "address": "321 Sixth Street, City, Country",
+            "phone": "000-111-2222",
+            "website": "https://www.company6.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Silver",
+            "otherInfo": "There can be absolutely any other information here."
+        },
+        {
+            "name": "Company 7",
+            "address": "555 Seventh Street, City, Country",
+            "phone": "333-444-5555",
+            "website": "https://www.company7.com",
+            "image": "images/company.webp",
+            "membershipLevel": "Bronze",
+            "otherInfo": "There can be absolutely any other information here."
+        }
+    ]
+};
+
+// Функция для случайной выборки элементов из массива
+function getRandomElements(arr, count) {
+    const shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
 }
 
-function displaySpotlightAds(members) {
-    const adsContainer = document.getElementById('ads-container');
-    const randomMembers = getRandomMembers(members, Math.floor(Math.random() * 2) + 2); // Randomly select 2 or 3 members
-    randomMembers.forEach(member => {
-        const adDiv = document.createElement('div');
-        adDiv.classList.add('ad-item');
-        adDiv.innerHTML = `
-        <img src="${member.image}" alt="${member.name}">
-        <h3>${member.name}</h3>
-        <p>${member.otherInfo}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
-        adsContainer.appendChild(adDiv);
+// Функция для отображения выбранных членов
+function displaySpotlightMembers(members) {
+    spotlightContainer.innerHTML = ''; // Очистка предыдущих данных
+
+    members.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('spotlight');
+        memberDiv.innerHTML = `
+            <h3>${member.name}</h3>
+            <img src="${member.image}" alt="${member.name}">
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+            <p>${member.otherInfo}</p>
+        `;
+        spotlightContainer.appendChild(memberDiv);
     });
 }
 
-fetch('members.json')
-    .then(response => response.json())
-    .then(data => {
-        displaySpotlightAds(data.members);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+// Основная логика
+function init() {
+    const qualifiedMembers = membersData.members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
+    const spotlightMembers = getRandomElements(qualifiedMembers, 3);
+    displaySpotlightMembers(spotlightMembers);
+}
+
+init();

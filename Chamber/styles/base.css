@@ -344,3 +344,27 @@ section a {
     top: 10px;
     right: 10px;
 }
+
+.forecast-item {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 10px;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+
+.spotlight {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+}
+
+.spotlight img {
+    max-width: 100%;
+    height: auto;
+}
