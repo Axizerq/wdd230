@@ -1,4 +1,4 @@
-const spotlightContainer = document.querySelector('#spotlight-container');
+/* const spotlightContainer = document.querySelector('#spotlight-container');
 
 const membersData = {
     "members": [
@@ -95,6 +95,56 @@ function displaySpotlightMembers(members) {
 
 
 function init() {
+    const qualifiedMembers = membersData.members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
+    const spotlightMembers = getRandomElements(qualifiedMembers, 3);
+    displaySpotlightMembers(spotlightMembers);
+}
+
+init();  */
+
+const baseURL = "https://axizerq.github.io/wdd230/Chamber/";
+
+
+const spotlightContainer = document.querySelector('#spotlight-container');
+
+// Функция для получения данных из JSON файла
+async function fetchMembersData() {
+    try {
+        const response = await fetch('data/members.json'); // Убедитесь, что путь к файлу JSON правильный
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}
+
+function getRandomElements(arr, count) {
+    const shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+function displaySpotlightMembers(members) {
+    spotlightContainer.innerHTML = '';
+
+    members.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('spotlight');
+        memberDiv.innerHTML = `
+            <h3>${member.name}</h3>
+            <img src="${member.image}" alt="${member.name}">
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+            <p>${member.otherInfo}</p>
+        `;
+        spotlightContainer.appendChild(memberDiv);
+    });
+}
+
+async function init() {
+    const membersData = await fetchMembersData();
     const qualifiedMembers = membersData.members.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
     const spotlightMembers = getRandomElements(qualifiedMembers, 3);
     displaySpotlightMembers(spotlightMembers);

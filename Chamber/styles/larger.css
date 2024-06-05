@@ -1,5 +1,4 @@
 @media (max-width: 768px) {
-
     * {
         margin: 0;
         padding: 0;
@@ -33,10 +32,15 @@
         list-style: none;
         margin: 0 auto;
         max-width: 760px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* Added */
     }
 
     .navigation li {
-        display: none;
+        display: block;
+        flex: 1 1 100%;
     }
 
     .navigation a {
@@ -51,7 +55,7 @@
     }
 
     .navigation a:hover,
-    navigation a:active {
+    .navigation a:active {
         color: white;
         background-color: black;
     }
@@ -64,16 +68,20 @@
         content: "❌";
     }
 
-    /* Ваш CSS код для больших экранов */
+    /* Your CSS code for larger screens */
     #content {
-        max-width: 1600px;
+        max-width: 100%;
         margin: 0 auto;
+        padding: 0 20px;
+        /* Added padding to prevent content from touching the edges */
     }
 
     header {
         display: grid;
         grid-template-columns: 150px auto;
         background-color: lightblue;
+        padding: 10px;
+        /* Added padding */
     }
 
     #title {
@@ -121,7 +129,6 @@
 
     main {
         display: grid;
-        /* grid-template-columns: 2fr 1fr; */
         gap: 10px;
     }
 
@@ -157,77 +164,61 @@
 
     img {
         vertical-align: middle;
+        max-width: 100%;
+        height: auto;
     }
 
     footer {
         text-align: center;
         background-color: lightblue;
+        padding: 10px;
+        /* Added padding */
     }
-}
 
-@media only screen and (min-width: 40em) {
-    .navigation {
+    /* Added styles for the form */
+    form {
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
         display: flex;
+        flex-direction: column;
     }
 
-    .navigation li {
-        display: block;
-        /* change state in small view */
-        flex: 1 1 100%;
+    label {
+        margin-bottom: 8px;
+        font-weight: bold;
     }
 
-    .navigation a {
-        text-align: center;
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
     }
 
-    #menu {
-        display: none;
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
     }
-}
 
-
-form {
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 207px;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
 }
