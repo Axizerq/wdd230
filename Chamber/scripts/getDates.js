@@ -14,7 +14,7 @@ lastModifiedElement.textContent = lastModified;
 
 
 
-const mainnav = document.querySelector('.nav')
+const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu');
 
 // Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
