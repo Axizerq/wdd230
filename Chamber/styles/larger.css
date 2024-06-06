@@ -88,7 +88,7 @@
         text-align: center;
     }
 
-    nav {
+    /*nav {
         display: flex;
         justify-content: space-between;
         max-width: 100%;
@@ -96,7 +96,7 @@
         flex-wrap: wrap;
         padding: 0px 22px;
         margin-left: -22px;
-    }
+    }*/
 
     ul {
         list-style-type: none;
